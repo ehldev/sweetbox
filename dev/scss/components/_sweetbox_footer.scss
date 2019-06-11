@@ -1,0 +1,16 @@
+.sweetbox-footer {
+	grid-row: 3 / 4;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 1em;
+
+	.sweetbox-description-img {
+		background-color: rgba($sweetbox_dark, .3);
+		color: $white;
+		margin: 0;
+		padding: 1em;
+	}
+}

@@ -1,13 +1,12 @@
-class User {
-	constructor(username) {
-		this.username = username
+// Función que inicializa el lightbox
+const sweetbox = (gallery_container, options) => {
+	if(options) {
+		listenEventSweetboxContainer(gallery_container, options)
 	}
-
-	getUsername() {
-		return this.username
+	else {
+		let defaultOptions = {
+			descriptionImage: false
+		}
+		listenEventSweetboxContainer(gallery_container, defaultOptions)
 	}
 }
-
-const user1 = new User('coderick')
-
-console.log(user1.getUsername())

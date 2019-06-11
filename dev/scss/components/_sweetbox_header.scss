@@ -1,0 +1,18 @@
+.sweetbox-header {
+	grid-row: 1 / 2;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.sweetbox-info {
+		font-size: 1rem;
+		margin-left: 1rem;
+		cursor: default;
+	}
+
+	.sweetbox-close {
+		margin-right: 1rem;
+		font-weight: bold;
+	}
+}

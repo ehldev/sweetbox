@@ -10,6 +10,7 @@ import babel from 'gulp-babel'
 import concat from 'gulp-concat'
 import uglify from 'gulp-uglify'
 import cachebust from 'gulp-cache-bust'
+import rename from 'gulp-rename'
 
 const dev = './dev/',
 	prod = './public/',
@@ -37,7 +38,7 @@ const html = () => {
 }
 
 const styles = () => {
-	return src(dev + 'scss/app.scss')
+	return src(dev + 'scss/sweetbox.scss')
         .pipe(wait(500))
         .pipe(sourcemaps.init({
             loadMaps: true
@@ -52,6 +53,7 @@ const styles = () => {
             browsers: ['last 2 versions'],
             cascade: false
         }))
+        .pipe(rename("sweetbox.min.css"))
         .pipe(dest(prod + 'css'))
 }
 
@@ -65,9 +67,10 @@ const scripts = () => {
 		.pipe(babel({
 			presets: ['@babel/env']
 		}))
-		.pipe(concat('app.min.js'))
+		.pipe(concat('sweetbox.js'))
 		.pipe(uglify())
 		.pipe(sourcemaps.write('.'))
+        .pipe(rename("sweetbox.min.js"))
 		.pipe(dest(prod + 'js/'))
 }
 
