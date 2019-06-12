@@ -1,9 +1,4 @@
-# gulpfile v4
-Gulpfile listo para trabajar con Pug, Sass y Babel.
+# Sweetbox js
+Librería javascript para mostrar imágenes en un dulce lightbox, sin dependencias (No Jquery)
 
-Instrucciones:
-  - Clona el repositorio
-  - Instala las dependencias: npm install
-  - Comando para desarrollo: <b>npm start</b> o simplemente <b>gulp</b> para empezar a compilar
-  - Comando para producción: <b>npm run build</b> o también <b>gulp build</b>
-  - Construye algo genial :)
+Encuentra un demo y la documentación oficial en https://codeerick95.github.io/sweetbox_docs/
